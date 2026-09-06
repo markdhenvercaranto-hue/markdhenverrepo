@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riddle Garden</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stage">
+  <div class="frame">
+
+    <div id="game" class="game">
+      <p class="eyebrow">Riddle Garden &middot; Round <span id="roundLabel">1</span> of 3</p>
+      <h1>Find your way through</h1>
+      <div class="progress" id="progress"></div>
+      <p class="riddle" id="riddleText"></p>
+      <div class="answer-row">
+        <input type="text" id="answerInput" placeholder="Type your answer" autocomplete="off">
+        <button id="submitBtn">Answer</button>
+      </div>
+      <div class="msg" id="msg"></div>
+      <span class="hint" id="hintToggle">Need a hint?</span>
+    </div>
+
+    <div id="book" class="book">
+      <p class="page-num">Page <span id="pageNum">1</span> of 10</p>
+      <h2 class="poem-title" id="poemTitle"></h2>
+      <p class="poem-body" id="poemBody"></p>
+      <div class="nav-row">
+        <button class="ghost" id="prevBtn">&larr; Prev</button>
+        <div class="dots-mini" id="dotsMini"></div>
+        <button class="ghost" id="nextBtn">Next &rarr;</button>
+      </div>
+    </div>
+
+    <div id="finale" class="finale" style="display:none;">
+      <p>You've read every page. Play again?</p>
+      <button id="restartBtn">Restart the garden</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

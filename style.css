@@ -1,0 +1,180 @@
+:root{
+  --ink:#20261f;
+  --page:#f4f1e6;
+  --panel:#fffdf7;
+  --moss:#3f6c51;
+  --moss-dark:#2c4d39;
+  --gold:#b8862c;
+  --line:#d9d2bd;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  min-height:100vh;
+  background:var(--ink);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.03), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.03), transparent 40%);
+  font-family:Georgia, 'Iowan Old Style', serif;
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px 16px;
+}
+.stage{
+  width:100%;
+  max-width:560px;
+}
+.frame{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:36px 32px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.35);
+  position:relative;
+}
+.eyebrow{
+  font-family:-apple-system, system-ui, sans-serif;
+  font-size:12px;
+  letter-spacing:0.04em;
+  color:#8a8570;
+  margin:0 0 6px;
+}
+h1{
+  margin:0 0 4px;
+  font-size:26px;
+  font-weight:normal;
+  color:var(--moss-dark);
+}
+.progress{
+  display:flex;
+  gap:6px;
+  margin:18px 0 26px;
+}
+.dot{
+  flex:1;
+  height:4px;
+  background:var(--line);
+  border-radius:2px;
+  overflow:hidden;
+}
+.dot span{
+  display:block;
+  height:100%;
+  width:0%;
+  background:var(--moss);
+  transition:width .4s ease;
+}
+.riddle{
+  font-size:19px;
+  line-height:1.65;
+  margin:0 0 22px;
+  color:var(--ink);
+}
+.answer-row{
+  display:flex;
+  gap:10px;
+}
+input[type=text]{
+  flex:1;
+  font-family:-apple-system, system-ui, sans-serif;
+  font-size:15px;
+  padding:11px 14px;
+  border:1px solid var(--line);
+  border-radius:4px;
+  background:#fff;
+  color:var(--ink);
+}
+input[type=text]:focus{
+  outline:none;
+  border-color:var(--moss);
+}
+button{
+  font-family:-apple-system, system-ui, sans-serif;
+  font-size:14px;
+  padding:11px 20px;
+  border:none;
+  border-radius:4px;
+  background:var(--moss);
+  color:#fff;
+  cursor:pointer;
+  transition:background .2s ease;
+}
+button:hover{background:var(--moss-dark);}
+button.ghost{
+  background:transparent;
+  color:var(--moss-dark);
+  border:1px solid var(--moss);
+}
+button.ghost:hover{background:rgba(63,108,81,0.08);}
+button:disabled{
+  opacity:0.4;
+  cursor:default;
+}
+button:disabled:hover{background:transparent;}
+.msg{
+  margin-top:12px;
+  font-family:-apple-system, system-ui, sans-serif;
+  font-size:13px;
+  min-height:18px;
+}
+.msg.err{color:#a13b2c;}
+.msg.ok{color:var(--moss-dark);}
+.hint{
+  margin-top:16px;
+  font-family:-apple-system, system-ui, sans-serif;
+  font-size:12px;
+  color:#8a8570;
+  cursor:pointer;
+  text-decoration:underline;
+  display:inline-block;
+}
+.center{text-align:center;}
+.book{
+  display:none;
+}
+.book.active{display:block;}
+.game.hidden{display:none;}
+.page-num{
+  font-family:-apple-system, system-ui, sans-serif;
+  font-size:12px;
+  color:#8a8570;
+  margin-bottom:10px;
+}
+.poem-title{
+  font-size:21px;
+  color:var(--moss-dark);
+  margin:0 0 14px;
+}
+.poem-body{
+  font-size:16px;
+  line-height:1.85;
+  white-space:pre-line;
+  margin:0 0 26px;
+  min-height:190px;
+}
+.nav-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.dots-mini{
+  display:flex;
+  gap:5px;
+}
+.dots-mini i{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--line);
+  display:inline-block;
+}
+.dots-mini i.on{background:var(--moss);}
+.finale{
+  text-align:center;
+  padding:20px 0 6px;
+}
+.finale p{
+  font-family:-apple-system, system-ui, sans-serif;
+  font-size:13px;
+  color:#8a8570;
+}
